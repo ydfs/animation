@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.android {
+    width: 221px;
+    height: 242px;
+    position: relative;
+    margin: 250px auto 0;
+    top: 0;
+    animation: jump 2s ease-in-out infinite;
+}
+@-webkit-keyframes jump{
+    65% {
+    top: -100px;
+    transform: scale(1.1);
+    }
+}
+.head {
+    position: relative;
+    width: 145px;
+    height: 56px;
+    margin: 0 auto;
+    background: #ABC828;
+    border-top-left-radius: 72px 56px;
+    border-top-right-radius: 72px 56px;
+}
+.eyes {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #FFF;
+    border-radius: 50%;
+    animation: colorful 2s linear infinite alternate;
+}
+.eye-left{
+    left: 35px;
+    top: 21px;
+}
+.eye-right{
+    left: 95px;
+    top: 21px;
+}
+.touch {
+    position: absolute;
+    width: 4px;
+    height: 25px;
+    background: #ABC828;
+    border-radius: 12px;
+    animation: colorful 2s linear infinite alternate;
+}
+.touch-left{
+    left: 40px;
+    top: -18px;
+    transform: rotate(-30deg);
+}
+.touch-right{
+    left: 105px;
+    top: -18px;
+    transform: rotate(30deg);
+}
+@-webkit-keyframes colorful{
+    0% {
+        background: #FF0000;
+    }
+    65% {
+        background: #152C5E;
+    }
+}
+
+
+.body {
+    position: relative;
+    width: 145px;
+    height: 128px;
+    margin: 4px auto;
+    background: #ABC828;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+.hand{
+    position: absolute;
+    width: 30px;
+    height: 95px;
+    background: #ABC828;
+    border-radius: 15px;
+}
+.hand-left{
+    left: -32px;
+    top: 8px;
+    animation: openlefthand 2s ease-in-out infinite;
+}
+.hand-right{
+    right: -32px;
+    top: 8px;
+    animation: openrighthand 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes openlefthand{
+    65% {
+        transform: rotate(30deg);
+        transform-origin: right 40px;
+    }
+}
+@-webkit-keyframes openrighthand{
+    65% {
+        transform: rotate(-30deg);
+        transform-origin: left 40px;
+    }
+}
+
+
+.footer {
+    position: relative;
+    width: 145px;
+    height: 50px;
+    margin: 0 auto 0;
+}
+.foot{
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background: #ABC828;
+    border-radius: 15px;
+}
+.foot-left{
+    left: 30px;
+    animation: openrighthand 2s ease-in-out infinite;
+}
+.foot-right{
+    right: 30px;
+    animation: openlefthand 2s ease-in-out infinite;
+}
+
+.shadow{
+    position: absolute;
+    width: 46px; 
+    height: 30px;
+    background: #ccc;
+    border-radius: 23px 15px;
+    bottom: -80px;
+    left: 50%;
+    box-shadow: 0 0 10px 10px #ccc;
+    transform: scaleY(0.3) translateX(-50%);
+    animation: shrink 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes shrink{
+    65%{
+    width: 134px;
+    height: 90px;
+    box-shadow: 0 0 20px 20px #ccc;
+    border-radius: 72px 45px;
+    }
+}
